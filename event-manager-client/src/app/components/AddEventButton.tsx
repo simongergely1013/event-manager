@@ -22,12 +22,12 @@ const style = {
   };
 
 const AddEventButton = ({addEvent}: any) => {
-  const [open, setOpen] = useState(false);
-  const [eventTitle, setEventTitle] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [startTime, setStartTime] = useState("");
-  const [endDate, setEndDate] = useState("");
-  const [endTime, setEndTime] = useState("");
+  const [open, setOpen] = useState<boolean>(false);
+  const [eventTitle, setEventTitle] = useState<string>("");
+  const [startDate, setStartDate] = useState<string>("");
+  const [startTime, setStartTime] = useState<string>("");
+  const [endDate, setEndDate] = useState<string>("");
+  const [endTime, setEndTime] = useState<string>("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 

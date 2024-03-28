@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Container } from "@mui/material";
-import { eventsData } from "../src/app/lib/events-data";
+import { eventsData, Event } from "../src/app/lib/events-data";
 import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -15,14 +15,14 @@ import DeleteEventButton from "@/app/components/DeleteEventButton";
 import AddEventButton from "@/app/components/AddEventButton";
 
 const Events = () => {
-  const [events, setEvents] = useState(eventsData);
+  const [events, setEvents] = useState<Event[]>(eventsData);
 
   const deleteEventById = (id: string) => {
-    const filteredEvents = events.filter(el => el.id !== id);
+    const filteredEvents: Event[] = events.filter(el => el.id !== id);
     setEvents(filteredEvents);
   }
 
-  const handleAddEvent = (obj: any) => {
+  const handleAddEvent = (obj: Event) => {
     setEvents([obj, ...events]);
   }
     return(

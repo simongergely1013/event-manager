@@ -22,7 +22,7 @@ const style = {
   };
 
 const DeleteEventButton = ({deleteEvent}: any) => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const handleDeleteEvent = () => {
