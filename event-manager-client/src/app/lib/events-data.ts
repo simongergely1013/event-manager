@@ -91,4 +91,4 @@ export const eventsData: Event[] = [
       "finish": "2022-10-07T12:30:00.000Z",
       "photo": null
     }
-  ]
+  ];

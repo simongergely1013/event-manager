@@ -45,7 +45,7 @@ const AddEventButton = ({addEvent}: any) => {
     setEndDate("");
     setEndTime("");
     handleClose();
-  }
+  };
 
   return (
     <div>
@@ -84,6 +84,6 @@ const AddEventButton = ({addEvent}: any) => {
       </Modal>
     </div>
   );
-}
+};
 
 export default AddEventButton;
