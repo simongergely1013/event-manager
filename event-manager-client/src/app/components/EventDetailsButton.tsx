@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -40,7 +39,7 @@ const EventDetailsButton = ({title, start, finish, id, photo, save}: any) => {
       photo
     });
     handleClose();
-  }
+  };
 
   return (
     <div>
@@ -79,6 +78,6 @@ const EventDetailsButton = ({title, start, finish, id, photo, save}: any) => {
       </Modal>
     </div>
   );
-}
+};
 
 export default EventDetailsButton;

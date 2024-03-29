@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import { Container } from "@mui/material";
 import { eventsData, Event } from "../src/app/lib/events-data";
-import Typography from '@mui/material/Typography';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Typography from "@mui/material/Typography";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import DeleteEventButton from "@/app/components/DeleteEventButton";
 import AddEventButton from "@/app/components/AddEventButton";
 import EventDetailsButton from "@/app/components/EventDetailsButton";
@@ -20,11 +20,16 @@ const Events = () => {
   const deleteEventById = (id: string) => {
     const filteredEvents: Event[] = events.filter(el => el.id !== id);
     setEvents(filteredEvents);
-  }
+  };
 
   const handleAddEvent = (obj: Event) => {
     setEvents([obj, ...events]);
-  }
+  };
+
+  const handleSave = (event: Event) => {
+    // eslint-disable-next-line
+    console.log(event);
+  };
 
     return(
         <Container maxWidth="lg">
@@ -54,16 +59,16 @@ const Events = () => {
                 </TableCell>
                 <TableCell align="right" suppressHydrationWarning>{startDate.toLocaleString()}</TableCell>
                 <TableCell align="right" suppressHydrationWarning>{finishDate.toLocaleString()}</TableCell>
-                <TableCell align="right"><EventDetailsButton save={(obj: Event) => console.log(obj)} title={event.title} start={startDate} finish={finishDate} id={event.id} photo={event.photo}/></TableCell>
+                <TableCell align="right"><EventDetailsButton save={(obj: Event) => handleSave(obj)} title={event.title} start={startDate} finish={finishDate} id={event.id} photo={event.photo}/></TableCell>
                 <TableCell align="right"><DeleteEventButton deleteEvent={() => deleteEventById(event.id)}/></TableCell>
               </TableRow>
-            )
+            );
           })}
         </TableBody>
       </Table>
     </TableContainer>
         </Container>
     );
-}
+};
 
 export default Events;

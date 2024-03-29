@@ -28,7 +28,7 @@ const DeleteEventButton = ({deleteEvent}: any) => {
     const handleDeleteEvent = () => {
       deleteEvent();
       handleClose();
-    }
+    };
   
     return (
       <div>
@@ -51,6 +51,6 @@ const DeleteEventButton = ({deleteEvent}: any) => {
         </Modal>
       </div>
     );
-  }
+  };
 
 export default DeleteEventButton;
