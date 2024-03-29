@@ -1,4 +1,12 @@
-export const eventsData = [
+export interface Event {
+  id: string;
+  start: string;
+  title: string;
+  finish: string;
+  photo: {id: string} | null;
+}
+
+export const eventsData: Event[] = [
     {
       "id": "0b96b899-b9f7-4f70-9327-a3a1f51ada94",
       "start": "2022-08-25T14:30:00.000Z",
