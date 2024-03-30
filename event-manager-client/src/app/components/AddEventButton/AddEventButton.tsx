@@ -26,6 +26,7 @@ const AddEventButton = ({ addEvent }: any) => {
     (title: string) => {
       setEventTitle(title);
     },
+    // eslint-disable-next-line
     [eventTitle]
   );
 
@@ -33,6 +34,7 @@ const AddEventButton = ({ addEvent }: any) => {
     (date: string) => {
       setStartDate(date);
     },
+    // eslint-disable-next-line
     [startDate]
   );
 
@@ -40,6 +42,7 @@ const AddEventButton = ({ addEvent }: any) => {
     (time: string) => {
       setStartTime(time);
     },
+    // eslint-disable-next-line
     [startTime]
   );
 
@@ -47,6 +50,7 @@ const AddEventButton = ({ addEvent }: any) => {
     (date: string) => {
       setEndDate(date);
     },
+    // eslint-disable-next-line
     [endDate]
   );
 
@@ -54,6 +58,7 @@ const AddEventButton = ({ addEvent }: any) => {
     (time: string) => {
       setEndTime(time);
     },
+    // eslint-disable-next-line
     [endTime]
   );
 

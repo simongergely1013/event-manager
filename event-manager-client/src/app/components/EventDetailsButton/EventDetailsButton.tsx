@@ -39,6 +39,7 @@ const EventDetailsButton = ({ title, start, finish, id, photo, save }: any) => {
     (title: string) => {
       setEventTitle(title);
     },
+    // eslint-disable-next-line
     [eventTitle]
   );
 
@@ -46,6 +47,7 @@ const EventDetailsButton = ({ title, start, finish, id, photo, save }: any) => {
     (date: string) => {
       setStartDate(date);
     },
+    // eslint-disable-next-line
     [startDate]
   );
 
@@ -53,6 +55,7 @@ const EventDetailsButton = ({ title, start, finish, id, photo, save }: any) => {
     (time: string) => {
       setStartTime(time);
     },
+    // eslint-disable-next-line
     [startTime]
   );
 
@@ -60,6 +63,7 @@ const EventDetailsButton = ({ title, start, finish, id, photo, save }: any) => {
     (date: string) => {
       setEndDate(date);
     },
+    // eslint-disable-next-line
     [endDate]
   );
 
@@ -67,6 +71,7 @@ const EventDetailsButton = ({ title, start, finish, id, photo, save }: any) => {
     (time: string) => {
       setEndTime(time);
     },
+    // eslint-disable-next-line
     [endTime]
   );
 
