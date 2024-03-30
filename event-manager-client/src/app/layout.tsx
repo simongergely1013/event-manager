@@ -1,6 +1,6 @@
 "use client";
-import { spaceGrotesk } from "./fonts";
 import { ApolloProvider } from "@apollo/client";
+import { spaceGrotesk } from "./fonts";
 import createApolloClient from "./lib/apollo-client";
 import "./globals.css";
 
@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spaceGrotesk.className} antialiased`}>
         <ApolloProvider client={client}>{children}</ApolloProvider>
-        </body>
+      </body>
     </html>
   );
 }
